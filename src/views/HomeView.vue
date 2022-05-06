@@ -1,19 +1,13 @@
 <template>
   <section class="home">
-    <HomeTop />
+    <TopBanner />
   </section>
 </template>
 
 <script>
-import HomeTop from "../components/HomeTop.vue";
 export default {
   name: "HomeView",
-  components: { HomeTop },
 };
 </script>
 
-<style lang="scss" scoped>
-.home {
-  background-color: black;
-}
-</style>
+<style lang="scss" scoped></style>
