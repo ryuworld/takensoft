@@ -29,6 +29,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@include keyframe(move) {
+  100% {
+    opacity: 1;
+    transform: translateX(260%);
+  }
+  0% {
+    opacity: 0;
+    transform: translateX(350%);
+  }
+}
 .topBanner {
   position: relative;
   height: 100vh;
@@ -36,8 +46,10 @@ export default {
   .text {
     position: absolute;
     top: 40%;
-    right: 10%;
     color: $white;
+    opacity: 0;
+    transition: 0.5s;
+    @include animation(0.2s, 1.5s, move);
     p {
       font-size: 2rem;
       line-height: 160%;

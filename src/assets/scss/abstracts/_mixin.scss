@@ -1,5 +1,21 @@
+@import "./variables";
+
 @mixin keyframe($animation_name) {
   @keyframes #{$animation_name} {
     @content;
   }
+}
+
+@mixin animation($delay, $duration, $animation) {
+  animation-delay: $delay;
+  animation-duration: $duration;
+  animation-name: $animation;
+  animation-timing-function: cubic-bezier(0.43, 0.03, 0.75, 0.47);
+  animation-fill-mode: forwards;
+}
+
+@mixin flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

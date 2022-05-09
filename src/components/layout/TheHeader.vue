@@ -45,9 +45,7 @@ export default {
   .container {
     max-width: 1280px;
     margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flex;
     h1 {
       max-width: 200px;
     }

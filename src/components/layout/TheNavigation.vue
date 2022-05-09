@@ -38,6 +38,7 @@ export default {
       max-width: 200px;
       padding: 10px 20px;
       color: #fff;
+      font-weight: bold;
       text-decoration: none;
       &:hover {
         color: dodgerblue;
