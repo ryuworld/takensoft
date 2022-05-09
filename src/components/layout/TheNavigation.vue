@@ -1,12 +1,9 @@
 <template>
   <nav class="mainNav">
     <ul>
-      <li><router-link to="#">회사 소개</router-link></li>
-      <li><router-link to="#">서비스 소개</router-link></li>
-      <li><router-link to="#">팀</router-link></li>
-      <li><router-link to="#">채용</router-link></li>
-      <li><router-link to="#">데이터 바우처</router-link></li>
-      <li><router-link to="#">서비스 문의</router-link></li>
+      <li v-for="menu in menus" :key="menu.title">
+        <router-link :to="menu.link">{{ menu.title }}</router-link>
+      </li>
     </ul>
   </nav>
 </template>
@@ -14,6 +11,18 @@
 <script>
 export default {
   name: "TheNavigation",
+  data() {
+    return {
+      menus: [
+        { title: "회사소개", link: "/company" },
+        { title: "서비스소개", link: "/service" },
+        { title: "팀", link: "/team" },
+        { title: "채용", link: "/career" },
+        { title: "데이터바우처", link: "/datavoucher" },
+        { title: "사용자문의", link: "/inquiry" },
+      ],
+    };
+  },
 };
 </script>
 

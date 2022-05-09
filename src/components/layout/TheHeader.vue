@@ -12,10 +12,8 @@
 </template>
 
 <script>
-import TheNavigation from "@/components/layout/TheNavigation.vue";
 export default {
   name: "TheHeader",
-  components: { TheNavigation },
 };
 </script>
 

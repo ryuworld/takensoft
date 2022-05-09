@@ -7,10 +7,11 @@ import router from "./router";
 import TheHeader from "./components/layout/TheHeader";
 import TheNavigation from "./components/layout/TheNavigation";
 import TheFooter from "./components/layout/TheFooter";
-import TopBanner from "./components/TopBanner.vue";
+import TopBanner from "./components/section/TopBanner.vue";
 import "./assets/css/style.css";
 
 Vue.config.productionTip = false;
+
 Vue.component("TheHeader", TheHeader);
 Vue.component("TheNavigation", TheNavigation);
 Vue.component("TheFooter", TheFooter);
