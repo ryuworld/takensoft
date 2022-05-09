@@ -1,5 +1,11 @@
 <template>
-  <header class="header">
+  <header
+    class="header"
+    :class="{
+      header: scrollPosition < 100,
+      header_fix: scrollPosition > 100,
+    }"
+  >
     <div class="container">
       <h1 class="logo">
         <router-link to="/"
@@ -14,6 +20,19 @@
 <script>
 export default {
   name: "TheHeader",
+  data() {
+    return {
+      scrollPosition: null,
+    };
+  },
+  methods: {
+    updateScroll() {
+      this.scrollPosition = window.scrollY;
+    },
+  },
+  mounted() {
+    window.addEventListener("scroll", this.updateScroll);
+  },
 };
 </script>
 
@@ -36,5 +55,12 @@ export default {
       width: 100%;
     }
   }
+}
+.header_fix {
+  width: 100%;
+  padding: 20px 0;
+  position: fixed;
+  z-index: 1000;
+  background-color: $black;
 }
 </style>

@@ -15,11 +15,11 @@ export default {
     return {
       menus: [
         { title: "회사소개", link: "/company" },
-        { title: "서비스소개", link: "/service" },
-        { title: "팀", link: "/team" },
+        { title: "서비스소개", link: "#service" },
+        { title: "팀", link: "#team" },
         { title: "채용", link: "/career" },
         { title: "데이터바우처", link: "/datavoucher" },
-        { title: "사용자문의", link: "/inquiry" },
+        { title: "사용자문의", link: "#inquiry" },
       ],
     };
   },
